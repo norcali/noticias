@@ -16,7 +16,7 @@ Agregador::Application.routes.draw do
 	match '/sites/new' => 'sites#new', :as => :new_site, :via => [:get, :post]
 	match '/:id' => 'sites#update', :via => :put
 	match '/:id' => 'sites#destroy', :via => :delete
-	match '/:id/agregar' => 'sites#agregar', :as => :site_agregar, :via => [:get, :post]
+	match '/:id/add' => 'sites#add', :as => :site_add, :via => [:get, :post]
 	match '/sites' => 'sites#create', :via => :post
 
 	#Posts

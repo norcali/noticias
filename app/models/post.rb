@@ -3,20 +3,20 @@ require 'uri'
 class Post < ActiveRecord::Base
 	belongs_to :site, :touch => true
 	belongs_to :user
-	attr_accessible :bajada, :fuente, :multimedia, :titulo, :usuario, :created_at, :foto, :user_id, :remove_foto
-	mount_uploader :foto, FotoUploader
-	validates :titulo, :fuente, :bajada,  :presence => true
+	attr_accessible :news_text, :news_source, :multimedia, :title, :username, :created_at, :image, :user_id, :remove_image
+	mount_uploader :image, ImageUploader
+	validates :title, :news_source, :news_text,  :presence => true
 	extend FriendlyId
-  	friendly_id :titulo, :use => :scoped, :scope => :site
+  	friendly_id :title, :use => :scoped, :scope => :site
 
 
 
-	def parsear_titulo(string)
+	def parse_title(string)
 		string = string.downcase
 		string = string.tr(' ', '-')
 	end
 
-	def parsear_url(string)
+	def parse_url(string)
 		if string.include?('http://') || string.include?('https://')
 			then
 				uri = URI.parse(string)
@@ -28,7 +28,7 @@ class Post < ActiveRecord::Base
 		return domain
 	end
 
-	def mostrar_foto
+	def mostrar_image
 		picture_url or multimedia
 	end
 	

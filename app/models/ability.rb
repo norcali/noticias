@@ -5,10 +5,10 @@ class Ability
     user ||= User.new # guest user
     if user.role? :admin
       can :manage, :all
-    elsif user.role? :usuario
+    elsif user.role? :username
       can :index, Site
       can :show, Site
-      can :agregar, Site
+      can :add, Site
       can :manage, Post
     else
       can :read, :all

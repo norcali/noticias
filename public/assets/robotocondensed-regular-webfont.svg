@@ -80,16 +80,16 @@
     <!-- Interior: Inicio -->
     <!-- Marca: Inicio -->
     <header>
-      <h1>FUENTELINK</h1>
+      <h1>news_sourceLINK</h1>
     </header>
     <!-- Marca: Fin -->
     <section>
       <!-- Listado: Inicio -->
       <div class="listado">
           <ul class="post">
-            <li class="usuario">
+            <li class="username">
               <a href="/playfutbol"><img alt="Thewho" height="144" src="/images/thewho.jpg" width="170" /></a>
-              <a href="/playfutbol">Nicolas Orcali</a><p><em>Compartio sus fuentes</em></p>
+              <a href="/playfutbol">Nicolas Orcali</a><p><em>Compartio sus news_sources</em></p>
             </li>
                             <li class="fondorojo"><a href="http://localhost:3000/playfutbol/2013/4/8/mavs-96-blazers-91-all-access-donuts"></a><img alt="881709" height="239" src="http://media.scout.com/Media/Image/88/881709.jpg" width="435" />
                         <h3>mavericks.scout.com</h3>
@@ -117,9 +117,9 @@
                         </li>
           </ul>
           <ul class="post">
-            <li class="usuario">
-              <a href="/economia"><img alt="Foto172x150" height="144" src="/images/foto172x150.png" width="170" /></a>
-              <a href="/economia">Daniel Sticco</a><p><em>Compartio sus fuentes</em></p>
+            <li class="username">
+              <a href="/economia"><img alt="image172x150" height="144" src="/images/image172x150.png" width="170" /></a>
+              <a href="/economia">Daniel Sticco</a><p><em>Compartio sus news_sources</em></p>
             </li>
                             <li class="fondoverde"><a href="http://localhost:3000/economia/2013/4/10/los-bancos-reducen-las-tasas-de-las-tarjetas-de-credito-al-30-por-ciento-anual"></a><img alt="600x0_570949" height="239" src="http://www.infobae.com/adjuntos/jpg/2012/08/600x0_570949.jpg" width="435" />
                         <h3>www.infobae.com</h3>
@@ -147,9 +147,9 @@
                         </li>
           </ul>
           <ul class="post">
-            <li class="usuario">
+            <li class="username">
               <a href="/nba"><img alt="Winter" height="144" src="/images/winter.jpg" width="170" /></a>
-              <a href="/nba">Nicolas Orcali</a><p><em>Compartio sus fuentes</em></p>
+              <a href="/nba">Nicolas Orcali</a><p><em>Compartio sus news_sources</em></p>
             </li>
                           <li> <a href="http://localhost:3000/nba/2013/4/15/dirk-nowitzki-scores-25-000th-point"></a>
                         <h3>espn.go.com</h3>

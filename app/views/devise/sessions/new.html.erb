@@ -13,7 +13,7 @@
   <!-- Login: Inicio -->
   	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
     <fieldset>
-      <label for="usuario">Usuario</label>
+      <label for="username">username</label>
       <%= f.email_field :email, :autofocus => true %>
       <label for="contrasenia">Contraseña</label>
       <%= f.password_field :password %>

@@ -13,10 +13,10 @@
 <div class="wrapper">
   <!-- Header: Inicio -->
   <div class="header">
-    <h1>Infobae - <%= @site.nombre %> </h1>
+    <h1>Infobae - <%= @site.name %> </h1>
     <% if current_user == nil || current_user.email != @site.user_id && (not current_user.admin?) %>
     <% else %>
-    <%= link_to 'Agregar Nota', site_agregar_path(@site), :class => "agregar"%>
+    <%= link_to 'add Nota', site_add_path(@site), :class => "add"%>
     <% end %>
     <% if user_signed_in? %>
       <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>

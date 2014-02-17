@@ -23,7 +23,7 @@ class SitesController < ApplicationController
     end
   end
 
-  def agregar
+  def add
     @site = Site.find(params[:id])
     render "posts/_form"
   end

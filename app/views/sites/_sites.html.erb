@@ -16,7 +16,7 @@
   <div class="sitios">
     <% @sites.each do |site| %>
     <ul>
-      <h3><%= site.nombre %></h3>
+      <h3><%= site.name %></h3>
       <li><%= link_to 'Show', site %></li>
       <li><%= link_to 'Edit', edit_site_path(site) %></li>
       <li class="last"><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></li>
@@ -27,7 +27,7 @@
         <li><%= link_to 'New Site', new_site_path %></li>
       <% end %>
       <li><%= link_to "My Profile", profiles_dashboard_path%></li>
-      <li class="last"><%= link_to('Logout', destroy_user_session_path, :method=>'delete', :class => "agregar") %></li>
+      <li class="last"><%= link_to('Logout', destroy_user_session_path, :method=>'delete', :class => "add") %></li>
     </ol>
   </div>
   <div class="exito"><p>Signed in successfully.</p></div>

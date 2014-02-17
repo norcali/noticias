@@ -5,9 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Notas - Agregador</title>
 <%= stylesheet_link_tag "reset", "backend" %>
-<% dominio = @post.parsear_url(@post.fuente)
-usuario = @post.usuario
-fecha = (Time.zone.now.to_date - @post.created_at.to_date).to_i
+<% dominio = @post.parse_url(@post.news_source)
+username = @post.username
+date = (Time.zone.now.to_date - @post.created_at.to_date).to_i
  %>
 
 </head>
@@ -15,10 +15,10 @@ fecha = (Time.zone.now.to_date - @post.created_at.to_date).to_i
 <div class="wrapper">
   <!-- Header: Inicio -->
   <div class="header">
-    <h1>Infobae - <%= @post.site.nombre %></h1>
+    <h1>Infobae - <%= @post.site.name %></h1>
     <% if current_user == nil || current_user.email != @site.user_id && (not current_user.admin?)%>
     <% else %>
-    <%= link_to 'Agregar Nota', site_agregar_path(@site), :class => "agregar"%>
+    <%= link_to 'add Nota', site_add_path(@site), :class => "add"%>
     <% end %>
     <% if user_signed_in? %>
       <% #link_to "My Profile", user_root_path%>
@@ -36,19 +36,19 @@ fecha = (Time.zone.now.to_date - @post.created_at.to_date).to_i
   <!-- Header: Fin -->
 <div class="notas">
   <ul class="show">
-<% if @post.foto_url != nil || @post.multimedia != "" %>
+<% if @post.image_url != nil || @post.multimedia != "" %>
     <% then %>
-    <li class="imagen"><%= image_tag @post.mostrar_foto, {:width =>300, :height=>300} %></li>
+    <li class="imagen"><%= image_tag @post.mostrar_image, {:width =>300, :height=>300} %></li>
 <% end %>
-    <li><%= link_to(@post.titulo, "#{@post.fuente}", :target => "_blank") %>
-      <p><%= @post.bajada %></p>
-      <small>en <%= dominio %></small><span> compartida por <%= link_to "#{usuario}", profile_path(@post.user, :user_id => @post.user.id) %></a>
+    <li><%= link_to(@post.title, "#{@post.news_source}", :target => "_blank") %>
+      <p><%= @post.news_text %></p>
+      <small>en <%= dominio %></small><span> compartida por <%= link_to "#{username}", profile_path(@post.user, :user_id => @post.user.id) %></a>
       <strong>
-      	<% if fecha == 0
+      	<% if date == 0
 	      	then %>
 	      	 hoy
 	      	<% else %>
-	      	 hace <%= fecha %> dias
+	      	 hace <%= date %> dias
       	<% end %>
       </strong><a href="#">Comentar</a></span>
     </li>

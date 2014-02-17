@@ -14,17 +14,17 @@
 ActiveRecord::Schema.define(:version => 20130408154533) do
 
   create_table "posts", :force => true do |t|
-    t.string   "titulo"
-    t.string   "bajada"
+    t.string   "title"
+    t.string   "news_text"
     t.text     "multimedia"
-    t.string   "usuario"
-    t.string   "fecha"
-    t.string   "fuente"
+    t.string   "username"
+    t.string   "date"
+    t.string   "news_source"
     t.integer  "site_id"
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "foto"
+    t.string   "image"
     t.string   "slug"
   end
 
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(:version => 20130408154533) do
   end
 
   create_table "sites", :force => true do |t|
-    t.string   "nombre"
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "user_id"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(:version => 20130408154533) do
     t.datetime "updated_at",                             :null => false
     t.string   "username"
     t.string   "descripcion"
-    t.string   "nombre"
+    t.string   "name"
     t.string   "avatar"
     t.string   "handle"
     t.string   "site_id"

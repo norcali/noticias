@@ -59,7 +59,7 @@
     <!-- Interior: Inicio -->
     <!-- Marca: Inicio -->
     <header>
-      <h1>FUENTELINK</h1>
+      <h1>news_sourceLINK</h1>
     </header>
     <!-- Marca: Fin -->
     <section>
@@ -71,36 +71,36 @@
         <% @sites.each do |site| %>
           <%
             user = nil
-            User.all.each do |usuario|
-              if usuario.email == site.user_id
-                user = usuario
+            User.all.each do |username|
+              if username.email == site.user_id
+                user = username
               end
             end
           %>
           <ul class="post">
-            <li class="usuario">
+            <li class="username">
               <% if user == nil %>
               <% else %>
               <%= link_to image_tag( user.avatar, {:width => 170, :height => 144}), site %>
-              <p><%= link_to user.nombre, site_path(site) %><em>Compartio sus fuentes</em></p>
+              <p><%= link_to user.name, site_path(site) %><em>Compartio sus news_sources</em></p>
               <% end %>
             </li>
             <% i = 0 %>
                 <% 2.times do %>
                     <% post = site.posts.reverse[i]%>
                     <% if post != nil %>
-                      <% fecha = (Time.zone.now.to_date - post.created_at.to_date).to_i %>
+                      <% date = (Time.zone.now.to_date - post.created_at.to_date).to_i %>
                       <%  año = post.created_at.to_date.year.to_s
                           mes = post.created_at.to_date.month.to_s
                           dia = post.created_at.to_date.day.to_s
                         %>
-                        <% if post.foto_url == nil && post.multimedia == "" %>
+                        <% if post.image_url == nil && post.multimedia == "" %>
                           <li> <%= link_to "", site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %>
                         <% else %>
                            <% if color.modulo(2) == 0 %>
-                            <li class="fondorojo"><%= link_to "", site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %><%= image_tag(post.mostrar_foto, {:width => 435, :height => 239}) %>
+                            <li class="fondorojo"><%= link_to "", site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %><%= image_tag(post.mostrar_image, {:width => 435, :height => 239}) %>
                           <% else %>
-                            <li class="fondoverde"><%= link_to "",site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %><%= image_tag(post.mostrar_foto, {:width => 435, :height => 239}) %>
+                            <li class="fondoverde"><%= link_to "",site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %><%= image_tag(post.mostrar_image, {:width => 435, :height => 239}) %>
                           <% end %>
                           <% j += 1 %>
                           <% if j == 2 %>
@@ -108,23 +108,23 @@
                           <% j = 0 %>
                           <% end %>
                         <% end %>
-                        <h3><%= post.parsear_url(post.fuente) %></h3>
+                        <h3><%= post.parse_url(post.news_source) %></h3>
                             <ol>
                                 <% url = site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %>
-                                <% title = post.titulo %>
+                                <% title = post.title %>
                                 <li><a id="fb-share" style='text-decoration:none;' type="icon_link" onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<%= title %>&amp;p[url]=<%= url %>&amp;p[images][0]=https://www.foobar.com/thumb.gif','sharer','toolbar=0,status=0,width=580,height=325');" href="javascript: void(0)">
                                 </a></li>
                                 <li><a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?url=<%=url%>&related=infobae,infobaeAmerica&via=infobae" >Twitter</a></li>
                             </ol>
-                        <h2><%= link_to(post.titulo, "#{post.fuente}", :target => "_blank") %></h2>
+                        <h2><%= link_to(post.title, "#{post.news_source}", :target => "_blank") %></h2>
                             <address>
-                              <% if fecha == 0 %>
+                              <% if date == 0 %>
                                  hoy
                                 <% else %>
-                                  <% if fecha == 1%>
+                                  <% if date == 1%>
                                     ayer
                                   <% else %>
-                                    hace <%= fecha %> dias
+                                    hace <%= date %> dias
                                   <% end %>
                               <% end %>
                             </address>

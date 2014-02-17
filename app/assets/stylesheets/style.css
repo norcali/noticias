@@ -24,7 +24,7 @@
 	  padding: 0px;
 	}
 	.topbar .inner  h1 a {
-		background: url(fuentelink135x24.png) no-repeat;
+		background: url(news_sourcelink135x24.png) no-repeat;
 		display: block;
 		height: 24px;
 		text-indent: -9999px;
@@ -131,7 +131,7 @@
 	  width: 100%;
 	}
 	#main header h1 {
-	  background: url(fuentelink251x44.png) no-repeat;
+	  background: url(news_sourcelink251x44.png) no-repeat;
 	  height: 44px;
 	  margin: 14px auto 0px;
 	  text-indent: -9999px;
@@ -197,33 +197,33 @@
 	  position: relative;
 	  width: 435px;
 	}
-	#main section div.listado ul li.usuario {
+	#main section div.listado ul li.username {
 	  background: url(flecha249x44.png) no-repeat -24px 50px;
 	  height: auto;
 	  margin-left: 18px;
 	  padding-top: 33px;
 	  width: 280px;
 	}
-	#main section div.listado ul li.usuario a {
+	#main section div.listado ul li.username a {
 	  height: auto;
 	  position: static;
 	  width: auto;
 	}
-	#main section div.listado ul li.usuario img, #main section article img {
+	#main section div.listado ul li.username img, #main section article img {
 	  margin-left: 27px;
 	}
-	#main section div.listado ul li.usuario p {
+	#main section div.listado ul li.username p {
 	  font: normal 14px/16px Arial, Helvetica, sans-serif;
 	  padding-top: 4px;
 	}
-	#main section div.listado ul li.usuario p a {
+	#main section div.listado ul li.username p a {
 	  color: #39478b;
 	  text-decoration: none;
 	}
-	#main section div.listado ul li.usuario p a:hover {
+	#main section div.listado ul li.username p a:hover {
 	  text-decoration: underline;
 	}
-	#main section div.listado ul li.usuario p em {
+	#main section div.listado ul li.username p em {
 	  color: #808080;
 	  display: block;
 	  font: italic 13px/22px Arial, Helvetica, sans-serif;
@@ -344,7 +344,7 @@
 	  right: 0px;
 	}
 
-	/****** Usuario: Inicio ******/
+	/****** username: Inicio ******/
 	#main section article {
 	  	background: url(flecha249x44.png) no-repeat -16px 5px;
 	  	float: left;
@@ -424,16 +424,16 @@
 	#main section aside div.listado ul li ol li, #main section aside div.listado ul li ol li:first-child {
 	  border: 0px;
 	}
-	/****** Usuario: Fin ******/
+	/****** username: Fin ******/
 
 	/****** Interior: Inicio ******/
-	#main section aside address.fecha {
+	#main section aside address.date {
 	  color: #000000;
 	  font: normal 18px/28px Arial, Helvetica, sans-serif;
 	  padding-bottom: 10px;
 	  padding-top: 40px;
 	}
-	#main section aside address.fecha a {
+	#main section aside address.date a {
 	  color: #41a7ef;
 	  font: normal 18px/28px Arial, Helvetica, sans-serif;
 	  text-decoration: none;

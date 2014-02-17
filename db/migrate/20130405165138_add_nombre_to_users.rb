@@ -1,5 +1,5 @@
-class AddNombreToUsers < ActiveRecord::Migration
+class AddnameToUsers < ActiveRecord::Migration
   def change
-    add_column :users, :nombre, :string
+    add_column :users, :name, :string
   end
 end

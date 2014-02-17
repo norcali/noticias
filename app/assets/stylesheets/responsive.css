@@ -5,22 +5,22 @@
 	#main section { width: 940px; }
 	#main section div.listado { margin: auto; width: 872px; }
 	#main section div.listado ul { width: 870px; }
-	#main section div.listado ul li.usuario { background-position: -5px 50px; float: none; margin: auto; padding-bottom: 20px; }
-	#main section div.listado ul li.usuario img { margin-left: 56px; }
-	#main section div.listado ul li.usuario p { text-align: center; }
+	#main section div.listado ul li.username { background-position: -5px 50px; float: none; margin: auto; padding-bottom: 20px; }
+	#main section div.listado ul li.username img { margin-left: 56px; }
+	#main section div.listado ul li.username p { text-align: center; }
 	#main section aside, #main section aside div.listado { width: 608px; }
 	#main section aside p { width: auto; }
 	#main section aside img { float: none; padding: 20px 0px; }
 	ul.redessociales .fb_iframe_widget span { width: 113px !important; }
 	.fb-comments, .fb-comments iframe[style], .fb_iframe_widget span { width: 100% !important; }
-	#main.usuario header div h2 { float: right; }
-	#main.usuario section article { float: none; width: 940px; }
-	#main.usuario section article a { display: inline-block; }
-	#main.usuario section article ol { padding-top: 30px; }
-	#main.usuario section article ol li { float: left; margin-right: 20px; }
-	#main.usuario section article ol li:first-child { float: none; }
-	#main.usuario section aside, #main.usuario section aside div.listado { float: none; margin: auto; width: 872px; }
-	#main.usuario section aside img { padding: 0px; }
+	#main.username header div h2 { float: right; }
+	#main.username section article { float: none; width: 940px; }
+	#main.username section article a { display: inline-block; }
+	#main.username section article ol { padding-top: 30px; }
+	#main.username section article ol li { float: left; margin-right: 20px; }
+	#main.username section article ol li:first-child { float: none; }
+	#main.username section aside, #main.username section aside div.listado { float: none; margin: auto; width: 872px; }
+	#main.username section aside img { padding: 0px; }
 	.bottombar .inner { float: none; width: 920px; }
 
 }
@@ -35,15 +35,15 @@
 	#main section div.listado { width: 435px; }
 	#main section div.listado ul { width: 433px; }
 	#main section div.listado ul li { float: none; }
-	#main section div.listado ul li.usuario { background-position: -5px 50px; float: none; margin: auto; padding-bottom: 20px; }
-	#main section div.listado ul li.usuario p { text-align: center; }
-	#main section div.listado ul li.usuario img { margin-left: 56px; }
+	#main section div.listado ul li.username { background-position: -5px 50px; float: none; margin: auto; padding-bottom: 20px; }
+	#main section div.listado ul li.username p { text-align: center; }
+	#main section div.listado ul li.username img { margin-left: 56px; }
 	#main section div.listado ul li ol li { float: left; }
-	#main.usuario header div h2 { font-size: 20px; float: right; }
-	#main.usuario section article { float: none; width: 724px; }
-	#main.usuario section div.listado { width: 100%; }
-	#main.usuario section aside { width: 435px; }
-	#main.usuario section aside div.listado ul { width: 433px; }
+	#main.username header div h2 { font-size: 20px; float: right; }
+	#main.username section article { float: none; width: 724px; }
+	#main.username section div.listado { width: 100%; }
+	#main.username section aside { width: 435px; }
+	#main.username section aside div.listado ul { width: 433px; }
 	.bottombar .inner { width: 750px; }
 }
 
@@ -56,9 +56,9 @@
 	#main section div.listado { margin: auto; width: 435px; }
 	#main section div.listado ul { width: 433px; }
 	#main section div.listado ul li { float: none; }
-	#main section div.listado ul li.usuario { background-position: -5px 50px; float: none; margin: auto; padding-bottom: 20px; }
-	#main section div.listado ul li.usuario p { text-align: center; }
-	#main section div.listado ul li.usuario img { margin-left: 56px; }
+	#main section div.listado ul li.username { background-position: -5px 50px; float: none; margin: auto; padding-bottom: 20px; }
+	#main section div.listado ul li.username p { text-align: center; }
+	#main section div.listado ul li.username img { margin-left: 56px; }
 	#main section div.listado ul li ol li { float: left; }
 	#main section article { width: 724px; }
 	#main section article p { width: auto; }
@@ -66,19 +66,19 @@
 	#main section article ol li { float: left; margin-right: 20px; }
 	#main section article ol li:first-child { float: none; margin-right: 0px; padding-bottom: 10px; }
 	#main section aside { width: 724px; }
-	#main section aside address.fecha { padding-top: 0px; }
+	#main section aside address.date { padding-top: 0px; }
 	#main section aside p { width: auto; }
 	#main section aside img { float: none; margin: 0px 144px; padding: 20px 0px; }
 	#main section article a.vertodos { display: inline-block; }
 	ul.redessociales .fb_iframe_widget span { width: 113px !important; }
 	.topbar .menu-pos .fb_iframe_widget span { width: 240px !important; }
 	.fb-comments, .fb-comments iframe[style], .fb_iframe_widget span { width: 100% !important; }
-	#main.usuario section aside { float: none; margin: auto; width: 435px; }
-	#main.usuario section aside div.listado { margin: auto; width: 435px; }
-	#main.usuario section aside div.listado ul { width: 433px; }
-	#main.usuario section div.listado ul li { float: none; }
-	#main.usuario section div.listado ul li ol li { float: left; width: auto; }
-	#main.usuario section aside img { margin: 0px; padding: 0px; }
+	#main.username section aside { float: none; margin: auto; width: 435px; }
+	#main.username section aside div.listado { margin: auto; width: 435px; }
+	#main.username section aside div.listado ul { width: 433px; }
+	#main.username section div.listado ul li { float: none; }
+	#main.username section div.listado ul li ol li { float: left; width: auto; }
+	#main.username section aside img { margin: 0px; padding: 0px; }
 }
 
 @media screen and (max-width: 767px) {
@@ -93,10 +93,10 @@
 	#main section aside { width: 100%; }
 	#main section aside img { background-size: 100%; height: auto; margin: 0px; width: 64%; }
 	.bottombar .inner { width: 90%; }
-	#main.usuario header div h2 { display: none; }
-	#main.usuario section article { float: none; width: 90%; }
-	#main.usuario section aside { height: auto; }
-	#main.usuario section aside img { background-size: 0%; width: 100%; }
+	#main.username header div h2 { display: none; }
+	#main.username section article { float: none; width: 90%; }
+	#main.username section aside { height: auto; }
+	#main.username section aside img { background-size: 0%; width: 100%; }
 }
 
 @media screen and (max-width: 620px) {
@@ -114,14 +114,14 @@
 	#main section div.listado ul li h2 { width: 90%; }
 	#main section div.listado ul li h2 a { font-size: 20px; width: 90%; }
 	#main section div.listado ul li img { background-size: 100%; height: 100%; width: 100%; }
-	#main section div.listado ul li.usuario a { text-align: center; }
-	#main section div.listado ul li.usuario a img { height: auto; width: auto; }
-	#main section div.listado ul li.usuario img { margin-left: 4px; }
+	#main section div.listado ul li.username a { text-align: center; }
+	#main section div.listado ul li.username a img { height: auto; width: auto; }
+	#main section div.listado ul li.username img { margin-left: 4px; }
 	#main section aside ul.redessociales li { float: none; margin-left: 0px; margin-top: 10px; }
 	#main section aside ul.redessociales li:first-child { margin-top: 0px; }
-	#main.usuario section aside { width: 100%; }
-	#main.usuario section aside div.listado { float: none; width: 100%; }
-	#main.usuario section aside div.listado ul { margin: 0px auto 20px; width: 99%; }
+	#main.username section aside { width: 100%; }
+	#main.username section aside div.listado { float: none; width: 100%; }
+	#main.username section aside div.listado ul { margin: 0px auto 20px; width: 99%; }
 }
 
 @media screen and (max-width: 348px) {

@@ -7,14 +7,14 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
   belongs_to :site, :touch => true
   has_many :posts
-  mount_uploader :avatar, FotoUploader
+  mount_uploader :avatar, ImageUploader
   extend FriendlyId
     friendly_id :username
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :username, :role_ids, :descripcion, :avatar, :nombre, :handle, :site_id
+  attr_accessible :email, :password, :password_confirmation, :username, :role_ids, :descripcion, :avatar, :name, :handle, :site_id
   # attr_accessible :title, :body
-  validates :email, :username, :nombre, :presence => true
+  validates :email, :username, :name, :presence => true
 
 
   before_save :setup_role
@@ -38,14 +38,14 @@ class User < ActiveRecord::Base
   require 'net/http'
 
   def tiene_blog(string)
-    dir = "http://opinion.infobae.com/#{parsear_nombre(string)}/"
+    dir = "http://opinion.infobae.com/#{parse_name(string)}/"
     url = URI.parse(dir)
     req = Net::HTTP.new(url.host, url.port)
     res = req.request_head(url.path).code == "200"
   end
 
-  def parsear_nombre(nombre)
-    bak = nombre.downcase
+  def parse_name(name)
+    bak = name.downcase
     bak = bak.tr(' ', '-')
   end
 

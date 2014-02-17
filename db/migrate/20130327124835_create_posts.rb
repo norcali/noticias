@@ -1,10 +1,10 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
-      t.string :titulo
-      t.string :bajada
+      t.string :title
+      t.string :news_text
       t.text :multimedia
-      t.string :fuente
+      t.string :news_source
       t.references :site
       t.references :user
       t.timestamps

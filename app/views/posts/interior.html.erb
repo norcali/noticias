@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <%
       user = nil
-      User.all.each do |usuario|
-        if usuario.email == @site.user_id
-          user = usuario
+      User.all.each do |username|
+        if username.email == @site.user_id
+          user = username
         end
       end
     %>
@@ -23,14 +23,14 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <title>Interior ~ Infobae.com</title>
-<meta name="description" content="<%= @post.bajada %>" />
-<meta property="og:title" content="<%= @post.titulo %>" />
+<meta name="description" content="<%= @post.news_text %>" />
+<meta property="og:title" content="<%= @post.title %>" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="<%= request.protocol + request.host + request.fullpath %>" />
 <meta property="og:img" content="<%= user.avatar %>" />
-<meta property="og:description" content="<%= @post.bajada %>" />
+<meta property="og:description" content="<%= @post.news_text %>" />
 <meta property="og:locale" content="es_LA" />
-<meta property="og:site_name" content="<%= @site.nombre %>" />
+<meta property="og:site_name" content="<%= @site.name %>" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="<%= request.protocol + request.host + request.fullpath %>" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -47,7 +47,7 @@
   <!-- Topbar: Inicio -->
   <div class="topbar">
     <div class="inner">
-      <h1><%= link_to "Fuentelink", root_path %></h1>
+      <h1><%= link_to "news_sourcelink", root_path %></h1>
       <ul class="menu">
         <li class="menu-pos"><a style="display:none" href="https://twitter.com/infobae" class="twitter-follow-button" data-show-count="true" data-lang="es">Seguir a @infobae</a></li>
         <li class="menu-pos">
@@ -68,36 +68,36 @@
     <!-- Marca: Inicio -->
     <header>
       <div>
-        <h3><span><%= link_to "Fuentelink > ", root_path %></span><%= link_to user.nombre, @post.site %></h3>
+        <h3><span><%= link_to "news_sourcelink > ", root_path %></span><%= link_to user.name, @post.site %></h3>
       </div>
     </header>
     <!-- Marca: Fin -->
     <section>
-      <!-- Usuario: Inicio -->
+      <!-- username: Inicio -->
       <article><%= link_to image_tag( user.avatar, {:width => 170, :height => 144}), @site %>
-        <h1><%= @site.nombre %>, infobae.com</h1>
+        <h1><%= @site.name %>, infobae.com</h1>
         <p><%= user.descripcion %></p>
         <p><%= user.handle %></p>
-        <% if user.tiene_blog(user.nombre)%>
-        <%= link_to "Ver perfil opinion", "http://opinion.infobae.com/#{user.parsear_nombre(user.nombre)}" %>
+        <% if user.tiene_blog(user.name)%>
+        <%= link_to "Ver perfil opinion", "http://opinion.infobae.com/#{user.parse_name(user.name)}" %>
         <% end %>
         <ol>
           <li>Otras personas que han compartido
-            sus fuentes</li>
-          <% User.all.each do |usuario| %>
-              <% if usuario.tiene_blog(usuario.nombre) && usuario != user %>
-              <li> <%= link_to "#{usuario.nombre}", "http://opinion.infobae.com/#{usuario.parsear_nombre(usuario.nombre)}" %></li>
+            sus news_sources</li>
+          <% User.all.each do |username| %>
+              <% if username.tiene_blog(username.name) && username != user %>
+              <li> <%= link_to "#{username.name}", "http://opinion.infobae.com/#{username.parse_name(username.name)}" %></li>
               <% end %>
             <% end %>
         </ol>
         <a class="vertodos"><%= link_to "Ver Todos", root_path %></a> </article>
-      <!-- Usuario: Fin -->
+      <!-- username: Fin -->
       <!-- Listado: Inicio -->
       <aside>
-        <address class="fecha">
-        <%= @post.created_at.strftime("%d/%m/%Y")%> - <%= @post.parsear_url(@post.fuente) %>
+        <address class="date">
+        <%= @post.created_at.strftime("%d/%m/%Y")%> - <%= @post.parse_url(@post.news_source) %>
         </address>
-        <h1><%= @post.titulo %></h1>
+        <h1><%= @post.title %></h1>
         <ul class="redessociales">
           <li>
             <div class="fb-like" data-href=<%= request.protocol + request.host + request.fullpath %> data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-action="recommend"></div>
@@ -108,9 +108,9 @@
             <div class="g-plusone" data-size="medium"></div>
           </li>
         </ul>
-        <p><%= @post.bajada %></p>
-        <% if @post.foto_url != nil || @post.multimedia != "" %>
-        <%= image_tag(@post.mostrar_foto, {:width => 436, :height => 327}) %>
+        <p><%= @post.news_text %></p>
+        <% if @post.image_url != nil || @post.multimedia != "" %>
+        <%= image_tag(@post.mostrar_image, {:width => 436, :height => 327}) %>
         <% end %>
         <ul class="redessociales">
           <li>
@@ -135,34 +135,34 @@
         <% @sites.each do |site| %>
           <%
             user = nil
-            User.all.each do |usuario|
-              if usuario.email == site.user_id
-                user = usuario
+            User.all.each do |username|
+              if username.email == site.user_id
+                user = username
               end
             end
           %>
           <ul class="post">
-            <li class="usuario">
+            <li class="username">
               <% if user == nil %>
               <% else %>
               <%= link_to image_tag( user.avatar, {:width => 170, :height => 144}), site %>
-              <%= link_to user.nombre, site_path(site) %><p><em>Compartio sus fuentes</em></p>
+              <%= link_to user.name, site_path(site) %><p><em>Compartio sus news_sources</em></p>
               <% end %>
             </li>
             <% i = 0 %>
                 <% 2.times do %>
                     <% post = site.posts.reverse[i]%>
                     <% if post != nil %>
-                      <% fecha = (Time.zone.now.to_date - post.created_at.to_date).to_i %>
+                      <% date = (Time.zone.now.to_date - post.created_at.to_date).to_i %>
                       <%  año = post.created_at.to_date.year.to_s
                           mes = post.created_at.to_date.month.to_s
                           dia = post.created_at.to_date.day.to_s
                         %>
-                        <% if post.foto_url != nil || post.multimedia != "" %>
+                        <% if post.image_url != nil || post.multimedia != "" %>
                           <% if color.modulo(2) == 0 %>
-                            <li class="fondorojo"><%= link_to "", site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %><%= image_tag(post.mostrar_foto, {:width => 435, :height => 239}) %>
+                            <li class="fondorojo"><%= link_to "", site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %><%= image_tag(post.mostrar_image, {:width => 435, :height => 239}) %>
                           <% else %>
-                            <li class="fondoverde"><%= link_to "",site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %><%= image_tag(post.mostrar_foto, {:width => 435, :height => 239}) %>
+                            <li class="fondoverde"><%= link_to "",site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %><%= image_tag(post.mostrar_image, {:width => 435, :height => 239}) %>
                           <% end %>
                           <% j += 1 %>
                           <% if j == 2 %>
@@ -172,23 +172,23 @@
                         <% else %>
                           <li><%= link_to "", site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %>
                         <% end %>
-                        <h3><%= post.parsear_url(post.fuente) %></h3>
+                        <h3><%= post.parse_url(post.news_source) %></h3>
                             <ol>
                                 <% url = site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post) %>
-                                <% title = post.titulo %>
+                                <% title = post.title %>
                                 <li><a id="fb-share" style='text-decoration:none;' type="icon_link" onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<%= title %>&amp;p[url]=<%= url %>&amp;p[images][0]=https://www.foobar.com/thumb.gif','sharer','toolbar=0,status=0,width=580,height=325');" href="javascript: void(0)">
                                 </a></li>
                                 <li><a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?url=<%=url%>&related=infobae,infobaeAmerica&via=infobae" >Twitter</a></li>
                             </ol>
-                        <h2><%= link_to(post.titulo, "#{post.fuente}", :target => "_blank") %></h2>
+                        <h2><%= link_to(post.title, "#{post.news_source}", :target => "_blank") %></h2>
                             <address>
-                              <% if fecha == 0 %>
+                              <% if date == 0 %>
                                  hoy
                                 <% else %>
-                                  <% if fecha == 1%>
+                                  <% if date == 1%>
                                     ayer
                                   <% else %>
-                                    hace <%= fecha %> dias
+                                    hace <%= date %> dias
                                   <% end %>
                               <% end %>
                             </address>

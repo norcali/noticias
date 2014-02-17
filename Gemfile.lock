@@ -151,6 +151,7 @@ DEPENDENCIES
   jquery-rails
   public_suffix
   rails (= 3.2.13)
+  rake
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer

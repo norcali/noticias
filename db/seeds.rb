@@ -8,6 +8,6 @@
 
 
 Role.create(:name => 'Admin')
-Role.create(:name => 'Usuario')
-user = User.create(:email => 'admin@infobae.com', :password => '12345678', :username => 'admin', :nombre => 'Mr Admin')
+Role.create(:name => 'username')
+user = User.create(:email => 'admin@infobae.com', :password => '12345678', :username => 'admin', :name => 'Mr Admin')
 user.give_admin

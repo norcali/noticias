@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "reset", "backend" %>
-<% dominio = post.parsear_url(post.fuente)
-usuario = current_user.username
-fecha = (Time.zone.now.to_date - post.created_at.to_date).to_i
+<% dominio = post.parse_url(post.news_source)
+username = current_user.username
+date = (Time.zone.now.to_date - post.created_at.to_date).to_i
 user = post.user
 site = post.site
 año = post.created_at.to_date.year.to_s
@@ -9,19 +9,19 @@ mes = post.created_at.to_date.month.to_s
 dia = post.created_at.to_date.day.to_s
 %>
   <ul>
-    <li><%= image_tag post.mostrar_foto, {:width =>111, :height=>100} %></li>
-    <li><%= link_to(post.titulo, "#{post.fuente}", :target => "_blank") %>
-      <p><%= post.bajada %></p>
-      <small>en <%= dominio %></small><span> compartida por <%= link_to "#{usuario}", profile_path(user, :user_id => user.id) %></a>
+    <li><%= image_tag post.mostrar_image, {:width =>111, :height=>100} %></li>
+    <li><%= link_to(post.title, "#{post.news_source}", :target => "_blank") %>
+      <p><%= post.news_text %></p>
+      <small>en <%= dominio %></small><span> compartida por <%= link_to "#{username}", profile_path(user, :user_id => user.id) %></a>
       <strong>
-        <% if fecha == 0
+        <% if date == 0
           then %>
            hoy
           <% else %>
-            <% if fecha == 1%>
+            <% if date == 1%>
               ayer
             <% else %>
-              hace <%= fecha %> dias
+              hace <%= date %> dias
             <% end %>
         <% end %>
       </strong></span>

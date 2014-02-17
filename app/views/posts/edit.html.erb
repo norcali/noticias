@@ -4,30 +4,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Agregar Notas - Agregador</title>
+<title>add Notas - Agregador</title>
 </head>
 
 <body>
 <!-- Wrapper: Inicio -->
 <div class="wrapper">
-  <h1><%= @post.site.nombre %></h1>
+  <h1><%= @post.site.name %></h1>
   <% @site = @post.site %>
   <!-- Login: Inicio -->
 
         <%= form_for([@site, @post]) do |f| %>
         <fieldset>
-          <label for="titulo">Título</label>
-            <%= f.text_field :titulo %>
+          <label for="title">Título</label>
+            <%= f.text_field :title %>
           <label for="url">URL</label>
-            <%= f.text_field :fuente %>
+            <%= f.text_field :news_source %>
           <label for="archivo">Imagen </label>
-            <%= f.file_field :foto %>
-          <label for="Borrar Foto">Borrar Foto</label>
-            <%= f.check_box :remove_foto %>
+            <%= f.file_field :image %>
+          <label for="Borrar image">Borrar image</label>
+            <%= f.check_box :remove_image %>
           <label for="imagen_url">Imagen URL</label>
             <%= f.text_field :multimedia %>
-          <label>Bajada</label>
-            <%= f.text_area :bajada %>
+          <label>news_text</label>
+            <%= f.text_area :news_text %>
           <input class="ingresar" type="submit" name="aceptar" value="Aceptar" />
           </fieldset>
         <% end %>
