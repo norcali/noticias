@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notas - Agregador</title>
+<%= stylesheet_link_tag "reset", "backend" %>
+<% dominio = @post.parsear_url(@post.fuente)
+usuario = @post.usuario
+fecha = (Time.zone.now.to_date - @post.created_at.to_date).to_i
+ %>
+
+</head>
+<!-- Wrapper: Inicio -->
+<div class="wrapper">
+  <!-- Header: Inicio -->
+  <div class="header">
+    <h1>Infobae - <%= @post.site.nombre %></h1>
+    <% if current_user == nil || current_user.email != @site.user_id && (not current_user.admin?)%>
+    <% else %>
+    <%= link_to 'Agregar Nota', site_agregar_path(@site), :class => "agregar"%>
+    <% end %>
+    <% if user_signed_in? %>
+      <% #link_to "My Profile", user_root_path%>
+      <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
+    <%end%>
+    <!-- Buscador: Inicio -->
+    <form action="#" method="get">
+      <fieldset>
+        <input type="text" name="buscarnotas" value="Buscar notas..." />
+        <input class="buscar" type="submit" name="buscar" value="Buscar" />
+      </fieldset>
+    </form>
+    <!-- Buscador: Fin -->
+  </div>
+  <!-- Header: Fin -->
+<div class="notas">
+  <ul class="show">
+<% if @post.foto_url != nil || @post.multimedia != "" %>
+    <% then %>
+    <li class="imagen"><%= image_tag @post.mostrar_foto, {:width =>300, :height=>300} %></li>
+<% end %>
+    <li><%= link_to(@post.titulo, "#{@post.fuente}", :target => "_blank") %>
+      <p><%= @post.bajada %></p>
+      <small>en <%= dominio %></small><span> compartida por <%= link_to "#{usuario}", profile_path(@post.user, :user_id => @post.user.id) %></a>
+      <strong>
+      	<% if fecha == 0
+	      	then %>
+	      	 hoy
+	      	<% else %>
+	      	 hace <%= fecha %> dias
+      	<% end %>
+      </strong><a href="#">Comentar</a></span>
+    </li>
+      <li class="last">
+      <%= link_to 'Back', site_path(@site, :id => @id_site), :class => "config" %>
+      <% if current_user.admin? ||  current_user.email == @site.user_id%>
+      <%= link_to 'Edit', edit_site_post_path(@post.site, :site_id => @post.site.id, :id => @post.id), :class => "config" %>
+      <% end %>
+      <%= link_to 'Perfil', profile_path(@post.user, :user_id => @post.user.id), :class => "config" %>
+  </ul>
+
+	<% lista = Array.new
+	@site.posts.each do |f|
+		if f == @post
+		else lista << f
+			end
+	end%>
+
+  	<%= render lista.reverse %>
+
+</div>

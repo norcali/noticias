@@ -1,0 +1,499 @@
+/****** Style: Inicio ******/
+
+	/****** Topbar: Inicio ******/
+	.topbar {
+	  background-color: #565656;
+	  height: 34px;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  z-index: 1200;
+	}
+	.topbar .inner {
+	  width: 1170px;
+	  margin: 0 auto;
+	  height: 34px;
+	  position: relative;
+	  background-color: #565656;
+	  z-index: 300;
+	}
+	.topbar .inner  h1 {
+    float: left;
+	  margin-top: 5px;
+	  padding: 0px;
+	}
+	.topbar .inner  h1 a {
+		background: url(fuentelink135x24.png) no-repeat;
+		display: block;
+		height: 24px;
+		text-indent: -9999px;
+		width: 135px;
+	}
+	.topbar .linkback {
+	  position: absolute;
+	  right: 0px;
+	  top: 0px;
+	  background-color: #000;
+	  height: 29px;
+	  width: 160px;
+	  padding: 5px 0 0 10px;
+	  text-align: right;
+	  background: url(topbar-gray.png) no-repeat scroll 0 0 #000;
+	}
+	.topbar .bg {
+	  height: 100%;
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	  height: 100%;
+	  z-index: 200;
+	  width: 30%;
+	  background-color: #000;
+	}
+	.topbar .title {
+	  font-size: 24px;
+	  margin: 0;
+	  font-weight: normal;
+	  padding-top: 6px;
+	  float: left;
+	  font: 24px Arial, Helvetica, sans-serif;
+	  text-transform: uppercase;
+	}
+	.topbar h2.title {
+	  margin-left: 35px;
+	}
+	.topbar h2.title .tlt-lnk {
+	  color: #797979;
+	}
+	.topbar .tlt-lnk {
+	  margin: 0;
+	  color: #fff;
+	}
+	.toplnk:visited,
+	.toplnk:active,
+	.topbar .menu-lnk,
+	.topbar .menu-lnk:active,
+	.topbar .menu-lnk:visited,
+	.toplnk {
+	  color: #AAAAAA;
+	  text-decoration: none;
+	}
+	.toplnk:hover,
+	.topbar .menu-lnk:hover {
+	  text-decoration: underline;
+	}
+	.topbar img {
+	  vertical-align: text-top;
+	}
+	.topbar .menu {
+	  margin: 0;
+	  padding: 0;
+	  position: absolute;
+	  right: 165px;
+	  top: 3px;
+	  width: 400px;
+	  z-index: 100;
+	}
+	.topbar .menu-pos {
+	  display: inline;
+	  padding-top: 4px;
+	  float: left;
+	}
+	.topbar .menu-pos iframe.twitter-follow-button  {
+	  width: 232px!important;
+	}
+	.topbar .linkback {
+	  color: #AAAAAA;
+	}
+	.topbar .fb-like span {
+	  height: 25px !important;
+	}
+	/****** Topbar: Fin ******/
+
+	/****** Main: Inicio ******/
+	#main {
+	  overflow: hidden;
+	  width: 100%;
+	}
+	#main header {
+	  background: #2b376c; /* Old browsers */ /*** CSS3: Gradientes ***/
+	  background: -moz-linear-gradient(top, #2b376c 0%, #39488a 100%); /* FF3.6+ */ /*** CSS3: Gradientes ***/
+	  background: -ms-linear-gradient(top, #2b376c 0%, #39488a 100%); /* IE10+ */ /*** CSS3: Gradientes ***/
+	  background: -o-linear-gradient(top, #2b376c 0%, #39488a 100%); /* Opera 11.10+ */ /*** CSS3: Gradientes ***/
+	  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2b376c), color-stop(100%, #39488a)); /* Chrome,Safari4+ */ /*** CSS3: Gradientes ***/
+	  background: -webkit-linear-gradient(top, #2b376c 0%, #39488a 100%); /* Chrome10+,Safari5.1+ */ /*** CSS3: Gradientes ***/
+	  background: linear-gradient(to bottom, #2b376c 0%, #39488a 100%); /* W3C */ /*** CSS3: Gradientes ***/
+	  border-top: solid 1px #181818;
+	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b376c', endColorstr='#39488a', GradientType=0 ); /* IE6-9 */ /*** CSS3: Gradientes ***/
+	  height: 73px;
+	  margin-top: 34px;
+	  width: 100%;
+	}
+	#main header h1 {
+	  background: url(fuentelink251x44.png) no-repeat;
+	  height: 44px;
+	  margin: 14px auto 0px;
+	  text-indent: -9999px;
+	  width: 251px;
+	}
+	#main header div {
+	  margin: auto;
+	  overflow: hidden;
+	  width: 1170px;
+	}
+	#main header div h2 {
+	  color: #ffffff;
+	  font: normal 30px/37px "Roboto Condensed Regular", Arial, Helvetica, sans-serif;
+	  margin-left: 6px;
+	  text-align: center;
+	  text-indent: 0px;
+	  padding-top: 16px;
+      width: auto;
+	}
+	#main header div h3 {
+    color: #ffffff;
+	  font: normal 16px/24px Arial, Helvetica, sans-serif;
+	  margin-left: 300px;
+	  padding-top: 24px;
+	}
+	#main header div h3 a {
+		color: #ffffff;
+		display: inline;
+		height: auto;
+		text-decoration: none;
+		width: auto;
+	}
+	#main header div h3 a:hover {
+		text-decoration: underline;
+	}
+	#main header div h3 a:first-child{
+	  color: #6d87fe;
+	}
+	#main section {
+		margin: auto;
+		min-height: 100px;
+		/*overflow: hidden;*/
+		position: relative;
+		 width: 1170px;
+	}
+	#main section div.listado {
+		clear: both;
+		overflow: hidden;
+		width: 1170px;
+	}
+	#main section div.listado ul {
+	  border: solid 1px #c7c7c7;
+	  overflow: hidden;
+	  margin-bottom: 20px;
+	  width: 1168px;
+	}
+	#main section div.listado ul:first-child {
+	  margin-top: 20px;
+	}
+	#main section div.listado ul li {
+	  float: left;
+	  height: 239px;
+	  position: relative;
+	  width: 435px;
+	}
+	#main section div.listado ul li.usuario {
+	  background: url(flecha249x44.png) no-repeat -24px 50px;
+	  height: auto;
+	  margin-left: 18px;
+	  padding-top: 33px;
+	  width: 280px;
+	}
+	#main section div.listado ul li.usuario a {
+	  height: auto;
+	  position: static;
+	  width: auto;
+	}
+	#main section div.listado ul li.usuario img, #main section article img {
+	  margin-left: 27px;
+	}
+	#main section div.listado ul li.usuario p {
+	  font: normal 14px/16px Arial, Helvetica, sans-serif;
+	  padding-top: 4px;
+	}
+	#main section div.listado ul li.usuario p a {
+	  color: #39478b;
+	  text-decoration: none;
+	}
+	#main section div.listado ul li.usuario p a:hover {
+	  text-decoration: underline;
+	}
+	#main section div.listado ul li.usuario p em {
+	  color: #808080;
+	  display: block;
+	  font: italic 13px/22px Arial, Helvetica, sans-serif;
+	}
+	#main section div.listado ul li a {
+	  display: block;
+	  height: 100%;
+	  position: absolute;
+	  width: 100%;
+	  z-index: 2;
+	}
+	#main section div.listado ul li.fondorojo a, #main section div.listado ul li.fondoverde a {
+	  background: -moz-linear-gradient(top, rgba(39,58,111,0.45) 0%, rgba(250,80,10,0.35) 100%); /* FF3.6+ */ /*** CSS3: Gradientes ***/
+	  background: -ms-linear-gradient(top, rgba(39,58,111,0.45) 0%, rgba(250,80,10,0.35) 100%); /* IE10+ */ /*** CSS3: Gradientes ***/
+	  background: -o-linear-gradient(top, rgba(39,58,111,0.45) 0%, rgba(250,80,10,0.35) 100%); /* Opera 11.10+ */ /*** CSS3: Gradientes ***/
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(39,58,111,0.45)), color-stop(100%,rgba(250,80,10,0.35))); /* Chrome,Safari4+ */ /*** CSS3: Gradientes ***/
+      background: -webkit-linear-gradient(top, rgba(39,58,111,0.45) 0%, rgba(250,80,10,0.35) 100%); /* Chrome10+,Safari5.1+ */ /*** CSS3: Gradientes ***/
+      background: linear-gradient(to bottom, rgba(39,58,111,0.45) 0%, rgba(250,80,10,0.35) 100%); /* W3C */ /*** CSS3: Gradientes ***/
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d273a6f', endColorstr='#4d9f3d00', GradientType=0 ); /* IE6-9 */ /*** CSS3: Gradientes ***/
+	}
+	#main section div.listado ul li.fondoverde a {
+	  background: -moz-linear-gradient(top, rgba(42,80,200,0.35) 0%, rgba(54,100,18,0.45) 100%); /* FF3.6+ */ /*** CSS3: Gradientes ***/
+	  background: -ms-linear-gradient(top, rgba(42,80,200,0.35) 0%, rgba(54,100,18,0.45) 100%); /* IE10+ */ /*** CSS3: Gradientes ***/
+	  background: -o-linear-gradient(top, rgba(42,80,200,0.35) 0%, rgba(54,100,18,0.45) 100%); /* Opera 11.10+ */ /*** CSS3: Gradientes ***/
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(54,100,18,0.45)), color-stop(100%, rgba(54,100,18,0.45))); /* Chrome,Safari4+ */ /*** CSS3: Gradientes ***/
+	  background: -webkit-linear-gradient(top, rgba(42,80,200,0.35) 0%, rgba(54,100,18,0.45) 100%); /* Chrome10+,Safari5.1+ */ /*** CSS3: Gradientes ***/
+	  background: linear-gradient(to bottom, rgba(42,80,200,0.35) 0%, rgba(54,100,18,0.45) 100%); /* W3C */ /*** CSS3: Gradientes ***/
+	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#802a5060', endColorstr='#80365212',GradientType=0 ); /* IE6-9 */ /*** CSS3: Gradientes ***/
+	}
+	#main section div.listado ul li h3 {
+	  color: #000000;
+	  float: left;
+	  font: normal 16px/24px Arial, Helvetica, sans-serif;
+	  margin-left: 20px;
+	  margin-top: 24px;
+	  position: absolute;
+	  top: 0px;
+	  left: 0px;
+	  z-index: 2;
+	}
+
+	#main section div.listado ul li.fondorojo h3,
+	#main section div.listado ul li.fondorojo h2 a,
+	#main section div.listado ul li.fondorojo address,
+	#main section div.listado ul li.fondorojo span,
+	#main section div.listado ul li.fondoverde h3,
+	#main section div.listado ul li.fondoverde h2 a,
+	#main section div.listado ul li.fondoverde address,
+	#main section div.listado ul li.fondoverde span {
+	  background: none;
+	  color: #ffffff;
+	  filter: none;
+	}
+	#main section div.listado ul li ol {
+	  overflow: hidden;
+	  margin-right: 20px;
+	  position: absolute;
+	  top: 20px;
+	  right: 0px;
+	  width: auto;
+	  z-index: 2;
+	}
+	#main section div.listado ul li ol li {
+	  height: auto;
+	  margin-left: 8px;
+	  width: auto;
+	}
+	#main section div.listado ul li ol li a {
+	  background: url(twitter24x24.png) no-repeat center top !important;
+	  filter: none !important;
+	  height: 24px;
+	  position: static;
+	  text-decoration: none;
+	  text-indent: -9999px;
+	  width: 24px;
+	}
+	#main section div.listado ul li ol li:first-child {
+	  margin-left: 0px;
+	}
+	#main section div.listado ul li ol li:first-child a {
+	  background: url(facebook24x24.png) no-repeat center top !important;
+	  filter: none;
+	}
+	#main section div.listado ul li h2 {
+	  margin-left: 20px;
+	  position: absolute;
+	  top: 90px;
+	  left: 0px;
+	  width: 390px;
+	  z-index: 2;
+	}
+	#main section div.listado ul li h2 a {
+	  color: #39478b;
+	  clear: both;
+	  font: normal 24px/26px "Roboto Condensed Regular", Arial, Helvetica, sans-serif;
+	  height: auto;
+	  position: static;
+	  text-decoration: none;
+	  width: auto;
+	}
+	#main section div.listado ul li h2 a:hover {
+	  text-decoration: underline;
+	}
+	#main section div.listado ul li address, #main section div.listado ul li span {
+	  color: #000000;
+	  font: normal 14px/16px Arial, Helvetica, sans-serif;
+	  margin-left: 20px;
+	  position: absolute;
+	  bottom: 16px;
+	  left: 0px;
+	  z-index: 2;
+	}
+	#main section div.listado ul li span {
+	  color: #39478b;
+	  margin-left: 0px;
+	  margin-right: 20px;
+	  left: auto;
+	  right: 0px;
+	}
+
+	/****** Usuario: Inicio ******/
+	#main section article {
+	  	background: url(flecha249x44.png) no-repeat -16px 5px;
+	  	float: left;
+	  	overflow: hidden;
+		position: relative;
+	  		top: -64px;
+	  	width: 260px;
+	}
+	#main section article h1 {
+	  color: #000000;
+	  font: normal 17px/20px "Roboto Condensed Regular", Arial, Helvetica, sans-serif;
+	  padding-top: 14px;
+	  text-align: left;
+	}
+	#main section article p {
+	  color: #6c6c6c;
+	  font: normal 13px/20px Arial, Helvetica, sans-serif;
+	  padding-top: 8px;
+	}
+	#main section article a {
+	  color: #4353a1;
+	  display: block;
+	  font: normal 13px/20px Arial, Helvetica, sans-serif;
+	  height: auto;
+	  padding-top: 14px;
+	  text-decoration: none;
+	  width: auto;
+	}
+	#main section article a.vertodos {
+	  color: #000000;
+	  padding-top: 10px;
+	}
+	#main section article ol {
+	  overflow: hidden;
+	  padding-top: 50px;
+	  width: auto;
+	}
+	#main section article ol li {
+	  color: #000000;
+	  font: normal 16px/18px "Roboto Condensed Regular", Arial, Helvetica, sans-serif;
+	  height: auto;
+	  width: auto;
+	}
+	#main section article ol li:first-child {
+	  padding-bottom: 10px;
+	}
+	#main section article ol li a {
+	  color: #39478B;
+	  display: block;
+	  font: normal 14px/26px Arial, Helvetica, sans-serif;
+	  height: auto;
+	  padding-top: 0px;
+	  text-decoration: none;
+	  width: auto;
+	}
+	#main section article ol li a:hover {
+	  color: #000000;
+	}
+	#main section aside, #main section aside div.listado {
+	  float: right;
+	  overflow: hidden;
+	  width: 872px;
+	}
+	#main section aside div.listado ul {
+	  border: 0px;
+	  width: 872px;
+	}
+	#main section aside div.listado ul li {
+      border: solid 1px #c7c7c7;
+      border-left: 0px;
+      width: 434px;
+	}
+	#main section aside div.listado ul li:first-child {
+	  border-left: solid 1px #c7c7c7;
+	  border-right: solid 1px #c7c7c7;
+	}
+	#main section aside div.listado ul li ol li, #main section aside div.listado ul li ol li:first-child {
+	  border: 0px;
+	}
+	/****** Usuario: Fin ******/
+
+	/****** Interior: Inicio ******/
+	#main section aside address.fecha {
+	  color: #000000;
+	  font: normal 18px/28px Arial, Helvetica, sans-serif;
+	  padding-bottom: 10px;
+	  padding-top: 40px;
+	}
+	#main section aside address.fecha a {
+	  color: #41a7ef;
+	  font: normal 18px/28px Arial, Helvetica, sans-serif;
+	  text-decoration: none;
+	}
+	#main section aside address a:hover {
+	  text-decoration: underline;
+	}
+	#main section aside h1 {
+	  color: #374585;
+	  font: normal 44px/50px "Roboto Condensed Regular", Arial, Helvetica, sans-serif;
+	  text-align: left;
+	}
+	#main section aside ul.redessociales {
+	  clear: both;
+	  height: 26px;
+	  padding: 20px 0px;
+	  width: auto;
+	}
+	#main section aside ul.redessociales li {
+	  float: left;
+	  margin-left: 40px;
+	}
+	#main section aside ul.redessociales li:first-child {
+	  margin-left: 0px;
+	}
+	#main section aside p {
+	  color: #000000;
+	  float: left;
+	  font: normal 16px/22px Arial, Helvetica, sans-serif;
+	  width: 400px;
+	}
+	#main section aside img {
+	  float: right;
+	}
+	/****** Interior: Fin ******/
+	/****** Main: Fin ******/
+
+	/****** Bottombar: Inicio ******/
+	.bottombar {
+	  background-color: #000;
+	  height: 40px;
+	  left: 0;
+	  position: relative;
+	  top: 0;
+	  width: 100%;
+	  z-index: 200;
+	}
+	.bottombar .inner {
+	  height: 40px;
+	  margin: 0 auto;
+	  position: relative;
+	  width: 1170px;
+	  z-index: 200;
+	}
+	.bottombar .linkback {
+	  padding: 8px 0 0 0;
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	}
+	/****** Bottombar: Fin ******/
+
+/****** Style: Fin ******/

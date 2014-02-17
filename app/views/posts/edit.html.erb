@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag "reset", "backend" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Agregar Notas - Agregador</title>
+</head>
+
+<body>
+<!-- Wrapper: Inicio -->
+<div class="wrapper">
+  <h1><%= @post.site.nombre %></h1>
+  <% @site = @post.site %>
+  <!-- Login: Inicio -->
+
+        <%= form_for([@site, @post]) do |f| %>
+        <fieldset>
+          <label for="titulo">Título</label>
+            <%= f.text_field :titulo %>
+          <label for="url">URL</label>
+            <%= f.text_field :fuente %>
+          <label for="archivo">Imagen </label>
+            <%= f.file_field :foto %>
+          <label for="Borrar Foto">Borrar Foto</label>
+            <%= f.check_box :remove_foto %>
+          <label for="imagen_url">Imagen URL</label>
+            <%= f.text_field :multimedia %>
+          <label>Bajada</label>
+            <%= f.text_area :bajada %>
+          <input class="ingresar" type="submit" name="aceptar" value="Aceptar" />
+          </fieldset>
+        <% end %>
+ <!-- Login: Fin -->
+</div>
+<!-- Wrapper: FIn -->
+</body>
+</html>
+
+<% @id_site = @post.site.id%>
+<%= link_to 'Back', site_post_path(@post, :site_id => @id_site, :id => @post.id) %>

@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Notas - Agregador</title>
+<%= stylesheet_link_tag "reset", "backend" %>
+
+</head>
+
+<body>
+<!-- Wrapper: Inicio -->
+<div class="wrapper">
+  <!-- Header: Inicio -->
+  <div class="header">
+    <h1>Infobae - <%= @site.nombre %> </h1>
+    <% if current_user == nil || current_user.email != @site.user_id && (not current_user.admin?) %>
+    <% else %>
+    <%= link_to 'Agregar Nota', site_agregar_path(@site), :class => "agregar"%>
+    <% end %>
+    <% if user_signed_in? %>
+      <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
+      <%= link_to "My Profile", profiles_dashboard_path%>
+      <%= link_to 'Edit', edit_site_path(@site) %>
+      <%= link_to 'Back', sites_path %>
+    <%end%>
+    <!-- Buscador: Inicio -->
+    <form action="#" method="get">
+      <fieldset>
+        <input type="text" name="buscarnotas" value="Buscar notas..." />
+        <input class="buscar" type="submit" name="buscar" value="Buscar" />
+      </fieldset>
+    </form>
+    <!-- Buscador: Fin -->
+  </div>
+  <!-- Header: Fin -->
+  <!-- Notas: Inicio -->
+  <div class="notas">
+  	<%= render @site.posts.reverse %>
+    <!-- Paginado: Inicio -->
+    <!-- Paginado: Fin -->
+  </div>
+  <!-- Notas: Fin -->
+</div>
+<!-- Wrapper: FIn -->
+</body>
+</html>
+
+</br>
+</br>
+
+

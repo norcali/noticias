@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Listado de sitios - Agregador</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/backend.css" />
+</head>
+<% @sites = Site.all %>
+<body>
+<!-- Wrapper: Inicio -->
+<div class="wrapper">
+  <h1>Infobae</h1>
+  <h2>Listing sites</h2>
+  <!-- Listado de sitios: Inicio -->
+  <div class="sitios">
+    <% @sites.each do |site| %>
+    <ul>
+      <h3><%= site.nombre %></h3>
+      <li><%= link_to 'Show', site %></li>
+      <li><%= link_to 'Edit', edit_site_path(site) %></li>
+      <li class="last"><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    </ul>
+    <% end %>
+    <ol>
+      <% if current_user.admin? %>
+        <li><%= link_to 'New Site', new_site_path %></li>
+      <% end %>
+      <li><%= link_to "My Profile", profiles_dashboard_path%></li>
+      <li class="last"><%= link_to('Logout', destroy_user_session_path, :method=>'delete', :class => "agregar") %></li>
+    </ol>
+  </div>
+  <div class="exito"><p>Signed in successfully.</p></div>
+  <!-- Listado de sitios: Fin -->
+</div>
+<!-- Wrapper: Fin -->
+</body>
+</html>

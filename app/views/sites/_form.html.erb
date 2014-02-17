@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Crear nuevo - Agregador</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/backend.css" />
+</head>
+
+<body>
+<!-- Wrapper: Inicio -->
+<div class="wrapper">
+  <h1>Infobae</h1>
+  <h2>Crear nuevo sitio</h2>
+  <!-- Crear nuevo: Inicio -->
+  <div class="sitios">
+  <%= form_for(@site) do |f| %>
+    <% if @site.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@site.errors.count, "error") %> prohibited this site from being saved:</h2>
+        <ul>
+        <% @site.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <form>
+      <fieldset>
+        <label for="titulo">nombre</label>
+        <%= f.text_field :nombre %>
+        <label for="titulo">email</label>
+        <%= f.text_field :user_id, :disabled => true %>
+      </fieldset>
+        <fieldset class="correos">
+        <% User.all.each do |user| %>
+          <% if (not user.admin?) %>
+              <%= label "email", user.email %>
+              <%= f.radio_button :user_id, user.email%>
+          <% end %>
+        <% end %>
+        <input class="crearsitio" type="submit" name="crearsitio" value="Crear sitio" />
+      </fieldset>
+    </form>
+    <ol>
+      <li><%= link_to 'Back', sites_path %></li>
+      <li><%= link_to "My Profile", profiles_dashboard_path%></li>
+      <li class="last"><%= link_to('Logout', destroy_user_session_path, :method=>'delete', :class => "agregar") %></li>
+    </ol>
+  </div>
+  <% end %>
+  <!-- Crear nuevo: Fin -->
+</div>
+<!-- Wrapper: Fin -->
+</body>
+</html>
+
+

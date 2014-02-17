@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag "reset", "backend" %>
+<% dominio = post.parsear_url(post.fuente)
+usuario = current_user.username
+fecha = (Time.zone.now.to_date - post.created_at.to_date).to_i
+user = post.user
+site = post.site
+año = post.created_at.to_date.year.to_s
+mes = post.created_at.to_date.month.to_s
+dia = post.created_at.to_date.day.to_s
+%>
+  <ul>
+    <li><%= image_tag post.mostrar_foto, {:width =>111, :height=>100} %></li>
+    <li><%= link_to(post.titulo, "#{post.fuente}", :target => "_blank") %>
+      <p><%= post.bajada %></p>
+      <small>en <%= dominio %></small><span> compartida por <%= link_to "#{usuario}", profile_path(user, :user_id => user.id) %></a>
+      <strong>
+        <% if fecha == 0
+          then %>
+           hoy
+          <% else %>
+            <% if fecha == 1%>
+              ayer
+            <% else %>
+              hace <%= fecha %> dias
+            <% end %>
+        <% end %>
+      </strong></span>
+    </li>
+    <li class="last">
+      <%= link_to 'Show', site_site_post_url(:site_id => site, :ano => año, :mes => mes, :dia => dia, :id => post), :class => "config" %>
+      <% if current_user.admin? ||  current_user.email == post.site.user_id%>
+      <%= link_to 'Borrar Post', [post.site, post],
+               :confirm => 'Seguro que desea borrar?',
+               :method => :delete,
+               :class => "config" %>
+      <% end %>
+    </li>
+  </ul>
+
+
+

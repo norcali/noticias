@@ -1,0 +1,12 @@
+<div class="notas">
+	<% if @user.posts != nil
+		then %>
+	<%= render @user.posts %>
+	<%else %>
+	No hay posts
+	<% end %>
+</div>
+
+<%= link_to 'Back', sites_path, :class => "config" %>
+<br />
+

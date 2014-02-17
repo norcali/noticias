@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login - Agregador</title>
+<%= stylesheet_link_tag "reset", "backend" %>
+</head>
+
+<body>
+<!-- Wrapper: Inicio -->
+<div class="wrapper">
+  <h1>Infobae</h1>
+  <!-- Login: Inicio -->
+  	<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <fieldset>
+      <label for="usuario">Usuario</label>
+      <%= f.email_field :email, :autofocus => true %>
+      <label for="contrasenia">Contraseña</label>
+      <%= f.password_field :password %>
+      <input class="ingresar" type="submit" name="ingresar" value="Ingresar" />
+    <% end %>
+  </form>
+  <!-- Login: Fin -->
+</div>
+<!-- Wrapper: FIn -->
+</body>
+</html>
+
+<%= render "devise/shared/links" %>
+
+

@@ -1,0 +1,420 @@
+/****** Backend: Inicio ******/
+div.wrapper { overflow: hidden; width: 100%; }
+
+	/****** Login: Inicio ******/
+	h1, h2 {
+		color: #000000;
+		font: bold 40px/44px Arial, Helvetica, sans-serif;
+		padding: 20px 0px;
+		text-align: center;
+	}
+	
+	h2 { font-size: 30px; padding-bottom: 20px; padding-top: 0px; }
+
+	form {
+		-webkit-border-radius: 6px; /****** CSS3: Bordes Redondeados ******/
+		border: solid 1px #aaaaaa;
+		border-radius: 6px; /****** CSS3: Bordes Redondeados ******/
+		margin: 0px auto;
+		overflow: hidden;
+		padding: 20px;
+		width: 370px;
+	}
+
+		form fieldset { border: 0px; overflow: hidden; width: auto; }
+
+		form fieldset.correos { padding-top: 10px; }
+
+			form fieldset label {
+				color: #000000;
+				display: block;
+				font: normal 16px/18px Arial, Helvetica, sans-serif;
+				height: auto;
+				padding: 10px 0px;
+				width: 370px;
+			}
+
+			form fieldset.correos label {
+				clear: both;
+				float: left;
+				font-size: 14px;
+				padding: 10px 0px;
+				width: auto;
+			}
+
+			form fieldset input {
+				-webkit-border-radius: 4px; /****** CSS3: Bordes Redondeados ******/
+				background: #ffffff;
+				border: solid 1px #aaaaaa;
+				border-radius: 4px; /****** CSS3: Bordes Redondeados ******/
+				display: block;
+				color: #999999;
+				font: normal 14px/22px Arial, Helvetica, sans-serif;
+				height: 22px;
+				margin-bottom: 10px;
+				padding: 6px;
+				width: 356px;
+			}
+
+			form fieldset.correos input {
+				border: 0px;
+				border-radius: 0px;
+				float: right;
+				height: auto;
+				margin: 0px;
+				margin-top: 12px;
+				width: auto;
+			}
+
+			form fieldset textarea {
+				-webkit-border-radius: 4px; /****** CSS3: Bordes Redondeados ******/
+				border: solid 1px #aaaaaa;
+				border-radius: 4px; /****** CSS3: Bordes Redondeados ******/
+				height: 160px;
+				resize: none;
+				padding: 6px;
+				width: 356px;
+			}
+
+			form fieldset input.ingresar, form fieldset input.crearsitio {
+				background: #39488a;
+				border-radius: 0px;
+				color: #ffffff;
+				cursor: pointer;
+				font: normal 12px/16px Arial, Helvetica, sans-serif;
+				height: 30px;
+				margin: 40px 134px 20px;
+				text-align: center;
+				width: 100px;
+			}
+
+			form fieldset a {
+				color: #999999;
+				display: block;
+				font: normal 14px/16px Arial, Helvetica, sans-serif;
+				height: auto;
+				padding: 4px 0px;
+				text-align: center;
+				text-decoration: none;
+				width: auto;
+			}
+			
+			form fieldset a:hover { text-decoration: underline; }
+	/****** Login: Fin ******/
+
+	/****** Login: Perfil: Inicio ******/
+	form.perfil { width: 674px; }
+
+		form.perfil fieldset { float: left; margin-left: 26px; width: 324px; }
+
+		form.perfil fieldset:first-child { margin-left: 0px; }
+
+			form.perfil fieldset label { color: #39488a; width: 324px; }
+
+				form.perfil fieldset label span { font-size: 11px; line-height: 10px; }
+
+			form.perfil fieldset input { width: 310px; }
+
+		form.perfil fieldset.submit {
+			clear: both;
+			float: right;
+			margin-top: 20px;
+			width: auto;
+		}
+
+		form.perfil fieldset input[type="file"] { font-size: 11px; }
+
+		form.perfil fieldset input[type="submit"] {
+			background: #39488a;
+			border: 0px;
+			border-radius: 0px;
+			color: #ffffff;
+			cursor: pointer;
+			float: left;
+			height: auto;
+			margin-bottom: 0px;
+			padding: 6px 16px;
+			text-align: center;
+			width: auto;
+		}
+
+		form.perfil fieldset input:first-child[type="submit"] {
+			background: #dbdbdb;
+			color: #666666;
+		}
+	/****** Login: Perfil: Fin ******/
+
+	/****** Header: Inicio ******/
+	div.header {
+		-webkit-box-shadow:  0px 1px 1px 1px #cccccc; /*** CSS3: Sombra de Caja ***/
+		background: url(../images/fondo.jpg);
+        box-shadow:  0px 1px 1px 1px #cccccc; /*** CSS3: Sombra de Caja ***/
+		overflow: hidden;
+		position: fixed;
+			top: 0px; left: 0px;
+		width: 100%;
+		z-index: 2;
+	}
+
+		div.header h1 { float: left; margin-left: 20px; }
+
+		div.header a {
+			color: #666666;
+			float: right;
+			font: normal 14px/18px Arial, Helvetica, sans-serif;
+			margin: 0px 20px;
+			overflow: hidden;
+			padding-top: 34px;
+			text-decoration: underline;
+			width: auto;
+		}
+
+		div.header a:hover { color: #000000; }
+
+		div.header a.agregar, div.notas ul li a.config {
+			background: #4d5354; /* Old browsers */ /*** CSS3: Gradientes ***/
+			background: -moz-linear-gradient(top, #4d5354 0%, #4d5354 50%, #0a0e0a 51%, #0a0809 100%); /* FF3.6+ */ /*** CSS3: Gradientes ***/
+			background: -ms-linear-gradient(top, #4d5354 0%, #4d5354 50%, #0a0e0a 51%, #0a0809 100%); /* IE10+ */ /*** CSS3: Gradientes ***/
+			background: -o-linear-gradient(top, #4d5354 0%, #4d5354 50%, #0a0e0a 51%, #0a0809 100%); /* Opera 11.10+ */ /*** CSS3: Gradientes ***/
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d5354), color-stop(50%, #4d5354), color-stop(51%, #0a0e0a), color-stop(100%, #0a0809)); /* Chrome,Safari4+ */ /*** CSS3: Gradientes ***/
+			background: -webkit-linear-gradient(top, #4d5354 0%, #4d5354 50%, #0a0e0a 51%, #0a0809 100%); /* Chrome10+,Safari5.1+ */ /*** CSS3: Gradientes ***/
+			background: linear-gradient(to bottom, #4d5354 0%, #4d5354 50%, #0a0e0a 51%, #0a0809 100%); /* W3C */ /*** CSS3: Gradientes ***/
+			border: solid 1px #000000;
+			color: #ffffff;
+			display: block;
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d5354', endColorstr='#0a0809',GradientType=0 ); /* IE6-9 */ /*** CSS3: Gradientes ***/
+			float: left;
+			font-size: 12px;
+			line-height: 16px;
+			margin: 26px 0px 0px 54px;
+			padding: 6px 14px;
+			text-decoration: none;
+		}
+
+		div.header form {
+			border: 0px;
+			border-radius: 0px;
+			float: left;
+			margin: 0px;
+			margin-left: 30px;
+			padding: 26px 0px;
+			width: 501px;
+		}
+
+			div.header form fieldset input {
+				-webkit-border-radius: 0px; /*** CSS3: Bordes Redondeados ***/
+				background: #999999;
+				border-radius: 0px; /*** CSS3: Bordes Redondeados ***/
+				color: #ffffff;
+				cursor: pointer;
+				float: right;
+				font-size: 12px;
+				height: 30px;
+				line-height: 16px;
+				margin-bottom: 0px;
+				width: 82px;
+			}
+
+			div.header form fieldset input:first-child {
+				background: #ffffff;
+				border-right: 0px;
+				color: #999999;
+				cursor: text;
+				float: left;
+				height: 16px;
+				width: 406px;
+			}
+	/****** Header: Fin ******/
+
+	/****** Notas: Inicio ******/
+	div.notas {
+		overflow: hidden;
+		margin: auto;
+		padding-top: 100px;
+		position: relative;
+		width: 90%;
+		z-index: 1;
+	}
+
+		div.notas ul {
+			clear: both;
+			border-bottom: solid 1px #dbdbdb;
+			overflow: hidden;
+			padding-bottom: 20px;
+			position: relative;
+			width: 100%;
+		}
+
+			div.notas ul li {
+				float: left;
+				overflow: hidden;
+				margin-top: 30px;
+				width: 76%;
+			}
+
+			div.notas ul li.last {
+				float: right;
+				margin-top: 70px;
+				position: absolute;
+					bottom: 22px; right: 0px;
+				width: auto;
+			}
+
+			div.notas ul li:first-child { width: 111px; }
+
+				div.notas ul li p {
+					color: #000000;
+					float: left;
+					font: normal 14px/18px Arial, Helvetica, sans-serif;
+					margin-left: 20px;
+					padding-top: 10px;
+				}
+
+				div.notas ul li small {
+					color: #999999;
+					clear: both;
+					display: block;
+					float: left;
+					font: normal 14px/16px Arial, Helvetica, sans-serif;
+					margin-left: 20px;
+					padding-top: 10px;
+				}
+
+				div.notas ul li span {
+					display: block;
+					float: right;
+					font: normal 14px/16px Arial, Helvetica, sans-serif;
+					height: auto;
+					padding-top: 5px;
+					width: auto;
+				}
+
+				div.notas ul li span a {
+					color: #999999;
+					float: none;
+					font-size: 14px;
+					display: inline;
+					margin-left: 0px;
+				}
+
+				div.notas ul li span strong { margin: 0px 16px; }
+
+				/****** Show: Inicio ******/
+				div.notas ul.show li { width: 70%; }
+
+				div.notas ul.show li.imagen { width: 300px; }
+
+				div.notas ul.show li.last { width: auto; }
+				/****** Show: Fin ******/
+
+				div.notas ul li a {
+					color: #000000;
+					display: block;
+					float: left;
+					font: normal 20px/26px Arial, Helvetica, sans-serif;
+					height: auto;
+					margin-left: 20px;
+					text-decoration: none;
+				}
+
+				div.notas ul li a:hover { text-decoration: underline; }
+
+				div.notas ul li.last a.config {
+					background: #39488a;
+					border: 0px;
+					color: #ffffff;
+					float: right;
+					margin-left: 10px;
+					margin-top: 46px;
+					width: auto;
+				}
+
+		/****** Paginado: Inicio *******/
+		div.notas a.vermas {
+			color: #000000;
+			display: inline-block;
+			font: normal 14px/18px Arial, Helvetica, sans-serif;
+			height: auto;
+			padding: 30px 0px;
+			text-decoration: none;
+			width: auto;
+		}
+
+		div.notas a.vermas:hover { text-decoration: underline; }
+		/****** Paginado: Fin ******/
+	/****** Notas: Fin ******/
+
+	/****** Listado de sitios: Inicio ******/
+	div.sitios {
+		-webkit-border-radius: 6px; /****** CSS3: Bordes Redondeados ******/
+		border: solid 1px #aaaaaa;
+		border-radius: 6px; /****** CSS3: Bordes Redondeados ******/
+		margin: 0px auto;
+		overflow: hidden;
+		padding: 20px;
+		width: 500px;
+	}
+
+	div.sitios ul { overflow: hidden; padding: 0px 0px 30px; width: 500px; }
+	
+	div.sitios ol {
+		margin: auto;
+		overflow: hidden;
+		padding-top: 20px;
+		width: 340px;
+	}
+
+		div.sitios ul h3 {
+			color: #000000;
+			font: normal 20px/24px Arial, Helvetica, sans-serif;
+			border-bottom: solid 1px #dbdbdb;
+			padding-bottom: 10px;
+		}
+		
+		div.sitios ul li, div.sitios ol li {
+			float: left;
+			margin-right: 20px;
+			padding-top: 10px;
+			width: auto;
+		}
+
+		div.sitios ol li { padding-top: 0px; }
+
+		div.sitios ul li.last, div.sitios ol li.last { margin-right: 0px; }
+
+			div.sitios ul li a, div.sitios ol li a {
+				background: none;
+				color: #666666;
+				display: block;
+				font: normal 14px/16px Arial, Helvetica, sans-serif;
+				height: auto;
+				text-decoration: none;
+				width: auto;
+			}
+
+			div.sitios ol li a.back { background: none; color: #000000; border: solid 1px #999999; width: 98px; }
+
+			div.sitios ul li a:hover { color: #39488a; }
+
+			div.sitios ol li a {
+				background: #39488a;
+				color: #ffffff;
+				cursor: pointer;
+				font: normal 12px/30px Arial, Helvetica, sans-serif;
+				height: 30px;
+				text-align: center;
+				width: 100px;
+			}
+	/****** Listado de sitios: Fin ******/
+
+	/****** Exito: Inicio ******/
+	div.exito {
+		margin: auto;
+		overflow: hidden;
+		padding-top: 10px;
+		width: 500px;
+	}
+
+		div.exito p { color: #000000; font: bold 14px/30px Arial, Helvetica, sans-serif; text-align: center; }
+	/****** Exito: Fin ******/
+/****** Backend: Fin ******/
